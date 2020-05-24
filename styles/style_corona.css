@@ -1,0 +1,43 @@
+﻿
+
+body {
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+	background-color: #E4701E;
+	background: #fff url("./../picture/corona.jpg");
+}
+
+p {
+	font-size: 18px;
+	padding-top: 10px;
+	color: #FFEFBB;
+	float: left;
+}
+
+a { 
+	color: #FFEFBB; 
+	padding: 3px; 
+}
+/* a:link    { background-color: 	transparent; }
+a:link    { background-color: orange; } */
+
+
+/* table */
+table {
+	font-size: 20px;
+	color: #FFEFBB;
+	font-family: serif;
+	font-family: cursive;
+}
+
+th {
+	color: #FAB134;
+	font-size: 28px;
+	text-align: center;
+}
+
+td {
+	font-size: 20px;
+	color: #FFEFBB;
+	font-family: serif;
+  font-family: bold;
+}

@@ -6,7 +6,8 @@
 body {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 	background-color: #E4701E;
-	background: #fff url("./../picture/Delfine-915.jpg");
+	background-image: url("./../picture/Delfine-915.jpg");
+	color: #FFEFBB;
 }
 
 /* Hintergrund für nav festlegen */
@@ -17,15 +18,15 @@ nav {
 /* Hintergrund für UL festlegen und Aufzählpunkte ausblenden */
 nav ul {
 	/* list-style-type: none; */
- 	text-align: center; 
+ 	text-align: left; 
 }
 
 nav li {
 	display: inline-block;
 	position:relative;
-	height: 40px;
-	margin-left: 40px;
-	margin-right: 40px;
+	height: 30px;
+	margin-left: 20px;
+	margin-right: 30px;
 }
 
 nav li:hover ul {
@@ -36,9 +37,9 @@ nav li:hover ul {
 nav li a {
 	display: table-cell;
 	vertical-align: middle;
-	background-color: #FFD700;
+	background-color: #8B814C;
 	width: 220px;
-	height: 40px;
+	height: 20px;
 	text-decoration:none;
 	color: #723300;
 	font-size: 23px;
@@ -51,9 +52,10 @@ nav li a:hover {
 }
 
 p {
+	padding-top: 10px;
 	padding-left: 20px;
 	font-size: 20px;
-	color: #FFEFBB;
+	float: left;
 	font-family: serif;
 }
 
@@ -63,16 +65,19 @@ a {
 }
 
 
-body ul {
+ul {
 	/* list-style-type: none;
 	float:right; */
 	padding-left: 50px;
 	padding-right: 50px;
+	list-style-type: circle; 
+	font-weight: bold;
 	color: #FAB134;
 }
 
-body ul li {
+ul li {
 	display: inline-block;
+	margin-left: 20px;
 	margin-right: 50px;
 	margin-top: 10px;
 	color: #FFEFBB;
@@ -114,10 +119,10 @@ td {
 }
 
 h1 {
-	margin-top: 75px;
+	margin-top: 25px;
 	margin-bottom: 10px;
 	text-align: center;
-	font-size: 78px;
+	font-size: 58px;
 	color: #FFEFBB;
 	font-family: 'harlow';
 	font-family: cursive;
@@ -131,14 +136,24 @@ h2 {
 hr { 
     width: 100%; 
     height: 5px; 
-    margin: 0 auto;
+    margin: 0px;
     color: blue;
     background: #dfac20;
+    padding-left: 0px;
 }
 
+footer {
+	height: 50px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #FFEFBB;
+	color: #723300;
+}
 
 footer p {
 	font-size: 18px;
+	padding-left: 10px;
 	padding-top: 10px;
 	color: #723300;
 	float: left;
@@ -164,10 +179,3 @@ footer ul li a {
 	color: #723300;
 }
 
-footer {
-	height: 50px;
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	background-color: #FFEFBB;
-}

@@ -59,32 +59,32 @@ p {
 	font-family: serif;
 }
 
-a { 
-	color: #800000; 
-	padding: 3px; 
-}
-
 
 ul {
 	/* list-style-type: none;
 	float:right; */
 	padding-left: 50px;
 	padding-right: 50px;
-	list-style-type: circle; 
 	font-weight: bold;
 	color: #FAB134;
 }
 
 ul li {
-	display: inline-block;
+	/*display: inline-block; */
 	margin-left: 20px;
 	margin-right: 50px;
-	margin-top: 10px;
-	color: #FFEFBB;
+	margin-top: 5px;
+	color: #800000;
+}
+
+a { 
+	color: #800000; 
+	padding: 3px; 
 }
 
 /* table */
 table {
+	margin-top:30px;
 	font-size: 20px;
 	font-family: serif;
 	font-family: cursive;

@@ -25,8 +25,8 @@ nav li {
 	display: inline-block;
 	position:relative;
 	height: 30px;
-	margin-left: 20px;
-	margin-right: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 nav li:hover ul {
@@ -38,7 +38,7 @@ nav li a {
 	display: table-cell;
 	vertical-align: middle;
 	background-color: #8B814C;
-	width: 220px;
+	width: 150px;
 	height: 20px;
 	text-decoration:none;
 	color: #723300;

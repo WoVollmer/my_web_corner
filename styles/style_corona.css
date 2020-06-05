@@ -4,14 +4,11 @@
 }
 
 ul li {
-	color: #FFEFBB;
-}
-a { 
-	color: #FFEFBB; 
+	color: #FFEFBB;   /* color bullets  */
 }
 
-/* table  */
-table {
-	color: #FFEFBB;
+a { 
+	color: #FFEFBB;  /* color links  */
 }
+
 

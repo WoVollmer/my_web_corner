@@ -3,11 +3,22 @@
 	padding:0;
 }
 
+/* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	
+  #ffffe5 ~white ocker
+	#fee391 ~light ocker
+	#fec44f ~ocker
+	#fe9929 ~dark ocker
+	#ec7014 ~light brown
+	#cc4c02 ~brown
+	#993404 ~dark brown
+	#662506
+*/
+
 body {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
-	background-color: #E4701E; /* grelles Orange */
-	background-image: url("./../picture/delfine.jpg");
-	color: #FFEFBB;
+	background-color: #993404; /* grelles Orange */
+	background-image: url("./../picture/delfine.jpg"); /* delfine.jpg  */		
+	color: #fee391;
 }
 
 .grid_table {
@@ -20,30 +31,33 @@ body {
 	font-size: 28px;
 	text-align: left;
 	margin-left: 100px;
-	color: #FAB134;
+	color: #fe9929;
 	font-family: cursive;
 }
 
 /* Hintergrund für nav festlegen */
 nav {
-	background-color: #8B814C; /*  #123456 */
-	height: 40px;
+	background-color: #fec44f 
 }
 
 /* Hintergrund für UL festlegen und Aufzählpunkte ausblenden  */
 nav ul {
-	/* list-style-type: none; */ /* Aufzählpunkte ausblenden  */
- 	text-align: left; 
+	list-style-type: none; /* Aufzählpunkte ausblenden  */
+ 	text-align: center; 	
 	height: 40px;
+	padding-left: 0px;
 }
 
-nav li {
-	display: inline-block; 
-	/* => horizontal statt vertikal */
+nav ul li {
+	display: inline-block;   /* => horizontal statt vertikal */
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
+	vertical-align: middle;
+	text-align: center; 	
+	width: 150px;
 	height: 30px;
-	margin-left: 10px;
-	margin-right: 10px;
+	color: #993404;  /* dunkleres braun */ 	
+	font-size: 23px;
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
 nav li:hover ul {
@@ -54,18 +68,23 @@ nav li:hover ul {
 nav li a {
 	display: table-cell;
 	vertical-align: middle;
-	background-color: #8B814C;
+	background-color: #fec44f;
 	width: 150px;
-	height: 25px;
-	text-decoration:none; /* => kein Unterstrich */
-	color: #723300;  /* dunkleres braun */
+	height: 30px;
+	text-decoration:none; /* => kein Link-Unterstrich */
+	color: #993404;  /* dunkleres braun */
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
 nav li a:hover {
-	color: #FFEFBB;
-	background-color: #723300;
+	color: #ffffe5;
+	background-color: #993404;
+}
+
+nav li .active {
+	color: #ffffe5;
+	/* background-color: #993404; */
 }
 
 /* submenu von nav */
@@ -76,19 +95,21 @@ nav li a:hover {
 .submenu li a {
 	display:block;
 	height: 30px;
-	width: 140px;
-	background-color: FFEFBB;
-	color: #723300;
-	font-size: 18px;
+	width: 150px;
+	background-color: #fec44f;
+	color: #993404;
+	font-size: 20px;
 	padding-top: 10px;
 }
 
 
 p {
+	margin-top: 10px;
 	padding-top: 10px;
 	padding-left: 20px;
 	font-size: 20px;
-	float: left;
+	text-align: left;
+	/* float: left; */
 	font-family: serif;
 }
 
@@ -96,44 +117,43 @@ p {
 ul {
 	/* list-style-type: none;
 	float:right; */
-	padding-left: 50px;
+	padding-left: 20px;
 	padding-right: 50px;
 	font-weight: bold;
-	color: #FAB134;
-	}
+	color: #fe9929;
+}
 
 ul li {
 	/* display: inline-block; */ /* otherwise no crlf */
 	margin-left: 20px;
 	margin-right: 50px;
 	margin-top: 5px;
-	color: #800000;  /* color bullets - red */
+	color: #662506;  /* color bullets - red */
 }
 
 a { 
-	color: #800000;  /* color links - red */
+	color: #662506 ;  /* color links - red */
 	font-size: 20px;
 	font-family: serif;
-	padding: 3px; 
 }
 
 /* table */
 table {
-	margin-top:30px;
+	margin-top:20px;
 	font-size: 20px;
 	font-family: serif;
 	font-family: cursive;
 }
 
 th {
-	color: #FAB134;
-	font-size: 28px;
+	color: #fe9929;
+	font-size: 23px;
 	text-align: center;
 }
 
 td {
 	font-size: 20px;
-	color: #FFEFBB;
+	color: #fee391;
 	font-family: serif;
   font-family: bold;
 }
@@ -145,14 +165,14 @@ h1 {
 	margin-bottom: 10px;
 	text-align: center;
 	font-size: 58px;
-	color: #FFEFBB;
+	color: #fee391;
 	font-family: 'harlow';
 	font-family: cursive;
 }
 
 h2 {
 	font-size: 20px;
-	color: #FAB134;
+	color: #fe9929;
 	font-family: 'harlow';
 	font-family: cursive;
 }
@@ -160,7 +180,7 @@ h2 {
 h3 {
 	font-size: 28px;
 	text-align: center;
-	color: #FAB134;
+	color: #fe9929;
 	font-family: cursive;
 }
 
@@ -174,19 +194,20 @@ hr {
 }
 
 footer {
-	height: 30px;
+	height: 40px;
 	position: fixed;
+	padding-left: 0%;
 	bottom: 0px;
 	width: 100%;
-	background-color: #FFEFBB;
-	color: #723300;
+	background-color: #fee391;
+	color: #993404;
 }
 
 footer p {
 	font-size: 18px;
 	padding-left: 10px;
-	padding-top: 10px;
-	color: #723300;
+	
+	color: #993404;
 	float: left;
 }
 
@@ -207,17 +228,14 @@ footer ul li a {
 	font-size: 25px;
 	text-decoration: none;
 	display: table-cell;
-	color: #723300;
+	color: #993404;
 }
 
 .middle_text {
-	float: left;
-	width: 50%;
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 50px;
 	padding-left: 100px;
-	padding-right: 30px;
 }
 
 
@@ -225,5 +243,5 @@ footer ul li a {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 100px;
+	border-radius: 20px;
 }

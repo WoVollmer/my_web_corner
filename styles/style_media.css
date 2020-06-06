@@ -1,0 +1,14 @@
+﻿body {
+	background-image: url("./../picture/zugspitze_morgenrot.jpg");
+	background-color: #B30000;
+}
+
+ul li {
+	color: #FFEFBB;   /* color bullets  */
+}
+
+a { 
+	color: #FFEFBB;  /* color links  */
+}
+
+

@@ -17,7 +17,7 @@
 body {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 	background-color: #993404; /* grelles Orange */
-	background-image: url("./../picture/delfine.jpg"); /* delfine.jpg  */		
+  background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
 	color: #fee391;
 }
 
@@ -113,7 +113,6 @@ p {
 	font-family: serif;
 }
 
-
 ul {
 	/* list-style-type: none;
 	float:right; */
@@ -204,9 +203,10 @@ footer {
 }
 
 footer p {
+	margin-top: 0px;
+	padding-top: 0px;
 	font-size: 18px;
 	padding-left: 10px;
-	
 	color: #993404;
 	float: left;
 }

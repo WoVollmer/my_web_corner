@@ -1,0 +1,232 @@
+﻿*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+	background-color: #E4701E; /* grelles Orange */
+	background-image: url("./../picture/zugspitze_morgenrot.jpg"); /* delfine.jpg  */		
+	margin-top: 20px;
+	color: #FFEFBB;
+}
+
+.grid_table {
+	display: grid;
+  grid-template-columns: 1fr 1fr; /*  2 columns with same width / 1 fraction each */		
+	margin-top: 20px;
+}
+
+.grid_table h3 {
+	font-size: 28px;
+	text-align: left;
+	margin-left: 100px;
+	color: #FAB134;
+	font-family: cursive;
+}
+
+/* Hintergrund für nav festlegen */
+nav {
+	background-color: #8B814C; /*  #123456 */
+	height: 40px;
+}
+
+/* Hintergrund für UL festlegen und Aufzählpunkte ausblenden  */
+nav ul {
+	/* list-style-type: none; */ /* Aufzählpunkte ausblenden  */
+ 	text-align: left; 
+	height: 40px;
+}
+
+nav li {
+	display: inline-block; 
+	/* => horizontal statt vertikal */
+	position:relative; /* => zugeordnete submenu untereinander angeordnet */
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+nav li:hover ul {
+	position: absolute;
+	display: block;
+}
+
+nav li a {
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #8B814C;
+	width: 150px;
+	height: 25px;
+	text-decoration:none; /* => kein Link-Unterstrich */
+	color: #723300;  /* dunkleres braun */
+	font-size: 23px;
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+}
+
+nav li a:hover {
+	color: #FFEFBB;
+	background-color: #723300;
+}
+
+/* submenu von nav */
+.submenu {
+	display:none;
+}
+
+.submenu li a {
+	display:block;
+	height: 30px;
+	width: 140px;
+	background-color: FFEFBB;
+	color: #723300;
+	font-size: 18px;
+	padding-top: 10px;
+}
+
+
+p {
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 20px;
+	font-size: 20px;
+	text-align: left;
+	/* float: left; */
+	font-family: serif;
+}
+
+
+ul {
+	/* list-style-type: none;
+	float:right; */
+	padding-left: 50px;
+	padding-right: 50px;
+	font-weight: bold;
+	color: #FAB134;
+}
+
+ul li {
+	/* display: inline-block; */ /* otherwise no crlf */
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-top: 5px;
+	color: #800000;  /* color bullets - red */
+}
+
+a { 
+	color: #800000;  /* color links - red */
+	font-size: 20px;
+	font-family: serif;
+	padding: 3px; 
+}
+
+/* table */
+table {
+	margin-top:30px;
+	font-size: 20px;
+	font-family: serif;
+	font-family: cursive;
+}
+
+th {
+	color: #FAB134;
+	font-size: 28px;
+	text-align: center;
+}
+
+td {
+	font-size: 20px;
+	color: #FFEFBB;
+	font-family: serif;
+  font-family: bold;
+}
+
+
+
+h1 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 58px;
+	color: #FFEFBB;
+	font-family: 'harlow';
+	font-family: cursive;
+}
+
+h2 {
+	font-size: 20px;
+	color: #FAB134;
+	font-family: 'harlow';
+	font-family: cursive;
+}
+
+h3 {
+	font-size: 28px;
+	text-align: center;
+	color: #FAB134;
+	font-family: cursive;
+}
+
+hr { 
+	width: 100%; 
+	height: 5px; 
+	margin: 0px;
+	color: blue;
+	background: #dfac20;
+	padding-left: 0px;
+}
+
+footer {
+	height: 40px;
+	position: fixed;
+	padding-left: 0%;
+	bottom: 0px;
+	width: 100%;
+	background-color: #FFEFBB;
+	color: #723300;
+}
+
+footer p {
+	font-size: 18px;
+	padding-left: 10px;
+
+	color: #723300;
+	float: left;
+}
+
+footer ul {
+	list-style-type: none;
+	float:right;
+	padding-right: 50px;
+}
+
+footer ul li {
+	display: inline-block;
+	margin-right: 50px;
+	margin-top: 10px;
+}
+
+footer ul li a {
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+	font-size: 25px;
+	text-decoration: none;
+	display: table-cell;
+	color: #723300;
+}
+
+.middle_text {
+	
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	padding-left: 100px;
+	
+}
+
+
+#langkofel_picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}

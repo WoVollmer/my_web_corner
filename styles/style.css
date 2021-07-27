@@ -21,13 +21,15 @@ body {
 	color: #fee391;
 }
 
-.grid_table {
+.grid_2_cols {
 	display: grid;
+	grid-column-gap: 5%; 
   grid-template-columns: 1fr 1fr; /*  2 columns with same width / 1 fraction each */		
 	margin-top: 20px;
+	max-width: 900px;
 }
 
-.grid_table h3 {
+.grid_2_cols h3 {
 	font-size: 28px;
 	text-align: left;
 	margin-left: 100px;
@@ -37,7 +39,7 @@ body {
 
 /* Hintergrund für nav festlegen */
 nav {
-	background-color: #fec44f 
+	background-color: #fec44f; 
 }
 
 /* Hintergrund für UL festlegen und Aufzählpunkte ausblenden  */
@@ -232,10 +234,9 @@ footer ul li a {
 }
 
 .middle_text {
-	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 50px;
-	padding-left: 100px;
+	padding-left: 150px;
 }
 
 

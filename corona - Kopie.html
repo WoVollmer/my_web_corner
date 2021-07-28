@@ -1,88 +1,89 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 	<head>	
 		<title>Corona Dashboard Sites</title>	
 		<meta charset="utf-8">
 		<meta name="author" content="Wolfgang Vollmer" />
-		<meta name="date" content="2020-05-13" />
+		<meta name="date" content="2020-06-07" />
 		<meta property="og:title" content="Wolfgang's new Corner of the Web" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<link rel="stylesheet" href="styles/style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta http-equiv="expires" content="0">  => disallow browser caching (o seconds)-->
+		<link rel="stylesheet" href="./styles/style.css"/>
 		<link rel="stylesheet" href="styles/style_corona.css"/>
 	</head>	
 	
-	<!-- Kommentar ( kann über mehrere
-	Zeilen gehen -->
-	<!-- <body background="./GRAPHIC/Delfine-915.jpg" bgColor=#ffffff> -->
 	
 	<body>
 		<nav>
 			<ul>
-				<li><a href="index.html" class="active">Startseite</a></li> 
+				<li><a href="index.html" class="active">Start</a></li> 
 				<li><a href="corona.html">Corona Sites</a></li>
-				<li><a href="php_test.php">PHP Test</a></li>
+				<li><a href="media.html">Media</a></li> 
+				<li>Next
+					<ul class="submenu">
+						<li><a href="next.html">Next 1</a></li> 
+						<li><a href="next.html">Mext 2</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 		
-		<!-- <header><center>Wolfgang's Corner of the Web</center> </header> -->
-		<h1><center>Corona Sites</center></h1>
 		
-		<table>
-			<thead>
-				<tr>
-					<th>Covid-19 Dashboard</th>
-					<th>Information</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<ul>
-							<li><a href="https://coronavirus.jhu.edu/map.html">
-							Johns Hopkins University Dashboard</a></li>
-							<li><a href="https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4">
-							Robert Koch-Institut Dashboard</a></li>
-							<li><a href="https://covid19.who.int/">
-							WHO Coronavirus Disease Dashboard</a> </li>						
-							<li><a href="https://wovollmer.github.io/github.io/" target="_blank" rel="noopener">
-							Wolfgang's Corona Dashboard</a></li>
-						</ul>
-					</td>
-					<td>
-						<ul>						
-							<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html">
-							RKI: Fallzahlen in Deutschland</a></li>
-							<li><a href="https://www.sueddeutsche.de/wissen/coronavirus-zahlen-daten-1.4844448">
-							SZ: Zahlen und Daten zu Covid-19</a> </li>
-							<li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/coronavirus/zahlen-zum-coronavirus-die-pandemie-im-ueberblick-16653240.html">
-							FAZ: Zahlen zum Coronavirus</a> </li>
-							<li><a href="https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm">
-							LGL Bayern: Coronavirus Fallzahlen</a> </li>
-							<li><a href="https://www.muenchen.de/rathaus/Stadtinfos/Coronavirus-Fallzahlen.html">
-							Stadt München: Coronavirus Fallzahlen</a> </li>
-							<li><a href="https://stochastik-tu-ilmenau.github.io/COVID-19/germany">
-							TU Ilmenau: Schätzen der Reproduktionszahl </a> </li>
-							<li><a href="https://corona.stat.uni-muenchen.de/nowcast/">
-							LMU Statistik: Reproduktionszahl Bayern & München</a> </li>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			
-			</br>
-			<div class="middle_text">
-				<p><em>Let's have a look !</em></p>
-			</div>
-			
-			
-			<footer>
-				<hr>
-				<script language=JavaScript>
-					<!--
-					document.write("&nbsp; &copy; WoVo; last Modification: " + document.lastModified);
-					//-->
-				</script>
-			</footer>
-			
-		</body>	
-	</html>																																																																																																																																																																																																								
+		<!-- <header><center>Wolfgang's Corner of the Web</center> </header> -->
+		<h1><center>Covid-19 Dashboard</center></h1>
+		
+		<div class="grid_table">
+			<section>	
+				<h3>Covid-19 Dashboard</h3>
+				<ul>
+					<li><a href="https://coronavirus.jhu.edu/map.html">
+					Johns Hopkins University Dashboard</a></li>
+					<li><a href="https://experience.arcgis.com/experience/478220a4c454480e823b17327b2bf1d4">
+					Robert Koch-Institut Dashboard</a></li>
+					<li><a href="https://covid19.who.int/">
+					WHO Coronavirus Disease Dashboard</a> </li>						
+					<li><a href="https://wovollmer.github.io/github.io/" target="_blank" rel="noopener">
+					Wolfgang's Corona Dashboard</a></li>
+					<li><a href="https://wovoshiny.shinyapps.io/Corona_Virus_TS_Shiny/" target="_blank" rel="noopener">
+					Wolfgang's Corona Country Select Daily Trend (Shiny)</a></li>
+					<li><a href="https://www.esri.de/de-de/landingpages/corona-impact-2020/uebersicht" target="_blank" rel="noopener">
+					ESRI Dashboards Overview (u.a. Österreich, Frankreich, ...)</a></li>	
+				</ul>
+			</section>
+			<section>		
+				<h3>Information</h3>
+				<ul>
+					<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html">
+					RKI: Fallzahlen in Deutschland</a></li>
+					<li><a href="https://www.sueddeutsche.de/wissen/coronavirus-zahlen-daten-1.4844448">
+					SZ: Zahlen und Daten zu Covid-19</a> </li>
+					<li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/coronavirus/zahlen-zum-coronavirus-die-pandemie-im-ueberblick-16653240.html">
+					FAZ: Zahlen zum Coronavirus</a> </li>
+					<li><a href="https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm">
+					LGL Bayern: Coronavirus Fallzahlen</a> </li>
+					<li><a href="https://www.muenchen.de/rathaus/Stadtinfos/Coronavirus-Fallzahlen.html">
+					Stadt München: Coronavirus Fallzahlen</a> </li>
+					<li><a href="https://stochastik-tu-ilmenau.github.io/COVID-19/germany">
+					TU Ilmenau: Schätzen der Reproduktionszahl </a> </li>
+					<li><a href="https://corona.stat.uni-muenchen.de/nowcast/">
+					LMU: Reproduktionszahl Bayern & München</a> </li>
+					<li><a href="https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea">
+					European Centre for Disease Prevention and Control</a> </li>
+				</ul>	
+			</section>
+		</div>
+		
+		<div class="middle_text">
+			<p><em>Let's have a look !</em></p>
+		</div>
+		
+		<footer>
+			<hr>
+			<script>
+				'use strict';
+				document.write("&nbsp; &copy; WoVo; last Modification: " + document.lastModified);
+			</script>
+		</footer>
+		
+	</body>	
+</html>																																																																																																																																																																																																															

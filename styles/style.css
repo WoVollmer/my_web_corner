@@ -4,14 +4,15 @@
 }
 
 /* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	
-  #ffffe5 ~white ocker
+  #ffffe5 ~very white ocker
+	#fff7bc ~white ocker
 	#fee391 ~light ocker
 	#fec44f ~ocker
 	#fe9929 ~dark ocker
 	#ec7014 ~light brown
 	#cc4c02 ~brown
 	#993404 ~dark brown
-	#662506
+	#662506 ~very dark brown
 */
 
 body {
@@ -26,7 +27,7 @@ body {
 	grid-column-gap: 5%; 
   grid-template-columns: 1fr 1fr; /*  2 columns with same width / 1 fraction each */		
 	margin-top: 20px;
-	max-width: 900px;
+	max-width: 1200px;
 }
 
 .grid_2_cols h3 {
@@ -42,19 +43,85 @@ nav {
 	background-color: #fec44f; 
 }
 
-/* Hintergrund für UL festlegen und Aufzählpunkte ausblenden  */
+/* Style the top navigation bar - class="topnav" */
+.topnav ul {
+	list-style-type: none; /* no bullets  */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+	background-color: #fec44f; 
+}
+
+.topnav ul li {
+  float: left;
+  display: inline-block;
+  color: #ffffe5;
+	padding: 0px 0px;
+}
+
+
+/* Style the topnav links */
+.topnav ul a {
+  color: #ffffe5;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+	color: #ffffe5;
+	background-color: #fa5305;
+}
+
+/* dropdown menue */
+.topnav li a, .dropbtn {
+  display: inline-block;
+  color: #993404;
+  text-align: center;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.submenu {
+	display:none;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+  width: 140px;
+	background-color: #fec44f;
+	z-index: 1;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hintergrund für UL festlegen und Bullets ausblenden  */
 nav ul {
-	list-style-type: none; /* Aufzählpunkte ausblenden  */
- 	text-align: center; 	
+	list-style-type: none; /* no bullets  */
+	margin: 0;
+  padding: 0;
 	height: 40px;
 	padding-left: 0px;
 }
+
 
 nav ul li {
 	display: inline-block;   /* => horizontal statt vertikal */
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
 	vertical-align: middle;
-	text-align: center; 	
+	text-align: center; 
+	border-right: 1px solid #993404;
+	border-left: 1px solid #993404;
 	width: 150px;
 	height: 30px;
 	color: #993404;  /* dunkleres braun */ 	
@@ -62,30 +129,29 @@ nav ul li {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
-nav li:hover ul {
-	position: absolute;
-	display: block;
-}
-
 nav li a {
 	display: table-cell;
 	vertical-align: middle;
 	background-color: #fec44f;
-	width: 150px;
-	height: 30px;
 	text-decoration:none; /* => kein Link-Unterstrich */
 	color: #993404;  /* dunkleres braun */
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
-
-nav li a:hover {
-	color: #ffffe5;
-	background-color: #993404;
+nav li:hover ul {
+	position: absolute;
+	display: block;
 }
 
-nav li .active {
+
+li a:hover {
 	color: #ffffe5;
+	background-color: #fa5305; /* etwas helleres dunkleres braun */
+}
+
+.active {
+	color: #ffffe5 !important;
+	background-color: #993404;
 	/* background-color: #993404; */
 }
 
@@ -164,6 +230,7 @@ td {
 h1 {
 	margin-top: 15px;
 	margin-bottom: 10px;
+	max-width: 1200px;
 	text-align: center;
 	font-size: 58px;
 	color: #fee391;
@@ -235,8 +302,8 @@ footer ul li a {
 
 .middle_text {
 	margin-top: 30px;
-	margin-bottom: 50px;
-	padding-left: 150px;
+	max-width: 1200px;
+	text-align: center;
 }
 
 

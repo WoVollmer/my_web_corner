@@ -4,29 +4,31 @@
 		<title>Media Sites</title>	
 		<meta charset="utf-8">
 		<meta name="author" content="Wolfgang Vollmer" />
-		<meta name="date" content="2020-06-07" />
-		<meta property="og:title" content="Wolfgang's new Corner of the Web" />
+		<meta name="date" content="2021-07-28" />
+		<meta property="og:title" content="Wolfgang's Corner of the Web" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <meta http-equiv="expires" content="0">  => disallow browser caching (o seconds)-->
+		<!-- "viewport" - area of browser window displaying the content, allows zoom on mobile devices -->
+		<!-- <meta http-equiv="expires" content="0">   => disallow browser caching (o seconds)-->
 		<link rel="stylesheet" href="./styles/style.css"/>
 		<link rel="stylesheet" href="styles/style_media.css"/>
 	</head>	
 	
 	<body>
-		<nav>
+		
+		<div class="topnav">
 			<ul>
-				<li><a href="index.html" class="active">Start</a></li> 
+				<li><a href="index.html">Start</a></li> 
 				<li><a href="corona.html">Corona Sites</a></li>
-				<li><a href="media.html">Media</a></li> 
-				<li>Next
-					<ul class="submenu">
-						<li><a href="next.html">Next 1</a></li> 
-						<li><a href="next.html">Mext 2</a></li>
-					</ul>
+				<li><a href="media.html" class="active">Media</a></li> 
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Next</a>
+					<div class="dropdown-content">
+						<a href="next.html">Next 1</a>
+						<a href="next.html">Mext 2</a>
+					</div>
 				</li>
 			</ul>
-		</nav>
-		
+		</div>
 		
 		<h1><center>Media Sites</center></h1>
 		
@@ -53,9 +55,7 @@
 			</section>
 		</div>
 		
-		<div class="middle_text">
-			<p><em>Let's have a look !</em></p>
-		</div>
+		<p class="middle_text"><em>Let's have a look !</em></p>
 		
 		<footer>
 			<hr>

@@ -1,7 +1,74 @@
-﻿*{
+/*
+Theme Name: Wolfgang's Corner of the Web
+Author: Wolfgang Vollmer
+GitHub site URL: https://wovollmer.github.io/my_web_corner/index.html
+ Local site URL: http://localhost/my_web_corner/index.html
+Description: hoizontal page split: header - body - footer
+vertical body split: two grid colummns
+Version: xy
+Requires at least: xy
+Requires PHP: xy
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/*--------------------------------------------------------------
+	>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 global definitions
+		1.1 color table
+2.0 header
+		2.1 .topnav
+3.0 body
+		3.1 .grid_2_cols
+4.0 footer
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+   13.1 Header
+   13.2 Front Page
+   13.3 Regular Content
+   13.4 Posts
+   13.5 Pages
+   13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+   16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 global definitions  
+--------------------------------------------------------------*/
+*{           /* global definitions  */
 	margin:0;
 	padding:0;
 }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+1.1 color table   
+--------------------------------------------------------------*/
 
 /* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	
   #ffffe5 ~very white ocker
@@ -15,48 +82,79 @@
 	#662506 ~very dark brown
 */
 
-body {
+/*--------------------------------------------------------------
+1.2 nav   
+--------------------------------------------------------------*/
+
+/* Hintergrund für URL festlegen und Bullets ausblenden  */
+nav ul {
+	list-style-type: none; /* no bullets  */
+	margin: 0;
+  padding: 0;
+	height: 40px;
+	padding-left: 0px;
+	background-color: #fec44f; /* Hintergrund für nav festlegen */
+}
+
+
+nav ul li {
+	display: inline-block;   /* => horizontal statt vertikal */
+	position:relative; /* => zugeordnete submenu untereinander angeordnet */
+	vertical-align: middle;
+	text-align: center; 
+	border-right: 1px solid #993404;
+	border-left: 1px solid #993404;
+	width: 150px;
+	height: 30px;
+	color: #993404;  /* dunkleres braun */ 	
+	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
-	background-color: #993404; /* grelles Orange */
-  background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
-	color: #fee391;
 }
 
-.grid_2_cols {
-	display: grid;
-	grid-column-gap: 5%; 
-  grid-template-columns: 1fr 1fr; /*  2 columns with same width / 1 fraction each */		
-	margin-top: 20px;
-	max-width: 1200px;
+nav li a {
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #fec44f;
+	text-decoration:none; /* => kein Link-Unterstrich */
+	color: #993404;  /* dunkleres braun */
+	font-size: 23px;
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+}
+nav li:hover ul {  /* on hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
+	position: absolute;
+	display: block;
 }
 
-.grid_2_cols h3 {
-	font-size: 28px;
-	text-align: left;
-	margin-left: 100px;
-	color: #fe9929;
-	font-family: cursive;
+/*--------------------------------------------------------------
+2.0 header  
+--------------------------------------------------------------*/
+
+header {
+	position: fixed;
+	padding-left: 0%;
+	height: 40px;
+	top: 0px;
+	width: 100%;
+	
+	background-color: #fee391;
+	color: #993404;
 }
 
-/* Hintergrund für nav festlegen */
-nav {
-	background-color: #fec44f; 
-}
+/*--------------------------------------------------------------
+2.1 topnav  
+--------------------------------------------------------------*/
 
 /* Style the top navigation bar - class="topnav" */
 .topnav ul {
-	list-style-type: none; /* no bullets  */
-  margin: 0;
-  padding: 0;
+	text-align: center;
   overflow: hidden;
-	background-color: #fec44f; 
 }
 
 .topnav ul li {
   float: left;
   display: inline-block;
+	height: 40px;
   color: #ffffe5;
-	padding: 0px 0px;
 }
 
 
@@ -79,13 +177,47 @@ nav {
   color: #993404;
   text-align: center;
   padding: 5px 20px;
-  text-decoration: none;
+	font: 23px;
+  text-decoration: none; /* no link underline  */
+}
+
+/*--------------------------------------------------------------
+3.0 body 
+--------------------------------------------------------------*/
+
+body {
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
+	background-color: #993404; /* grelles Orange */
+  background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
+	color: #fee391;
+	margin-top: 40px;
+	top: 0px;
+}
+
+/*--------------------------------------------------------------
+3.1 .grid_2_cols
+--------------------------------------------------------------*/
+.grid_2_cols {
+	display: grid;
+	grid-column-gap: 5%; 
+  grid-template-columns: 1fr 1fr; /*  2 columns with same width / 1 fraction each */		
+	margin-top: 20px;
+	max-width: 1200px;
+}
+
+.grid_2_cols h3 {
+	font-size: 28px;
+	text-align: left;
+	margin-left: 100px;
+	color: #fe9929;
+	font-family: cursive;
 }
 
 li.dropdown {
   display: inline-block;
 }
 
+/* class submenu => ausblenden */
 .submenu {
 	display:none;
 }
@@ -95,6 +227,7 @@ li.dropdown {
 	position: absolute;
   width: 140px;
 	background-color: #fec44f;
+	font-size: 10px;
 	z-index: 1;
 }
 
@@ -105,7 +238,7 @@ li.dropdown {
   display: block;
 }
 
-/* Hintergrund für UL festlegen und Bullets ausblenden  */
+/* Hintergrund für URL festlegen und Bullets ausblenden  */
 nav ul {
 	list-style-type: none; /* no bullets  */
 	margin: 0;
@@ -138,7 +271,7 @@ nav li a {
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
-nav li:hover ul {
+nav li:hover ul {  /* on hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
 	position: absolute;
 	display: block;
 }
@@ -228,8 +361,6 @@ td {
 
 
 h1 {
-	margin-top: 15px;
-	margin-bottom: 10px;
 	max-width: 1200px;
 	text-align: center;
 	font-size: 58px;
@@ -260,6 +391,9 @@ hr {
 	background: #dfac20;
 	padding-left: 0px;
 }
+
+
+
 
 footer {
 	height: 40px;

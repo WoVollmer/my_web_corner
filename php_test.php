@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="styles/style_php_test.css"/>
 <h1><?=$site_name?></h1>
 
+<p>
+	<?php 
+		include ("./messaage_hello.php");
+		// <p> Tag Klammer liefert css style des Tags
+	?>
+</p>
+
 <div class="grid_table">
 	<section>	
 		<h3>Google, Wikipedia, ...</h3>

@@ -3,6 +3,10 @@
 	background-color: #B30000;
 }
 
+.grid_2_cols h3 {
+	color: #ffffe5;
+}
+
 ul li {
 	color: #FFEFBB;   /* color bullets  */
 }

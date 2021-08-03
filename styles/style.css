@@ -1,56 +1,34 @@
 /*
-Theme Name: Wolfgang's Corner of the Web
-Author: Wolfgang Vollmer
-GitHub site URL: https://wovollmer.github.io/my_web_corner/index.html
- Local site URL: http://localhost/my_web_corner/index.html
-Description: hoizontal page split: header - body - footer
-vertical body split: two grid colummns
-Version: xy
-Requires at least: xy
-Requires PHP: xy
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Theme Name: Wolfgang's Corner of the Web
+	Author: Wolfgang Vollmer
+	GitHub site URL: https://wovollmer.github.io/my_web_corner/index.html
+	Local site URL: http://localhost/my_web_corner/index.html
+	Description: hoizontal page split: header - body - footer
+	vertical body split: two grid colummns
+	Version: xy
+	Requires at least: xy
+	Requires PHP: xy
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
 /*--------------------------------------------------------------
 	>>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 global definitions
-		1.1 color table
-2.0 header
-		2.1 .topnav
-3.0 body
-		3.1 .grid_2_cols
-4.0 footer
-4.0 Clearings
-5.0 Typography
-6.0 Forms
-7.0 Formatting
-8.0 Lists
-9.0 Tables
-10.0 Links
-11.0 Featured Image Hover
-12.0 Navigation
-13.0 Layout
-   13.1 Header
-   13.2 Front Page
-   13.3 Regular Content
-   13.4 Posts
-   13.5 Pages
-   13.6 Footer
-14.0 Comments
-15.0 Widgets
-16.0 Media
-   16.1 Galleries
-17.0 Customizer
-18.0 SVGs Fallbacks
-19.0 Media Queries
-20.0 Print
+	----------------------------------------------------------------
+	1.0 global definitions
+	  1.1 color table
+	  1.2 nav
+	  1.2 .topnav
+	2.0 body
+	3.0 header
+	4.0 .grid_2_cols
+	5.0 footer
+
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-1.0 global definitions  
+	1.0 global definitions  
 --------------------------------------------------------------*/
 *{           /* global definitions  */
 	margin:0;
@@ -67,7 +45,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-1.1 color table   
+	1.1 color table   
 --------------------------------------------------------------*/
 
 /* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	
@@ -83,27 +61,29 @@ section {
 */
 
 /*--------------------------------------------------------------
-1.2 nav   
+	1.2 nav   
 --------------------------------------------------------------*/
 
 /* Hintergrund für URL festlegen und Bullets ausblenden  */
-nav ul {
+nav ul {                   /* specificity: 2 : two elements/HTML selectors */  
 	list-style-type: none; /* no bullets  */
-	margin: 0;
-  padding: 0;
 	height: 40px;
-	padding-left: 0px;
 	background-color: #fec44f; /* Hintergrund für nav festlegen */
 }
 
+/* Style the top navigation bar - class="topnav" */
+nav.topnav ul {        /* specificity: 12 : 1 elements + 1 class * 10 */ 
+	text-align: center;
+  /* overflow: hidden;  */
+}
 
-nav ul li {
+nav ul li {         /* specificity: 3 */
 	display: inline-block;   /* => horizontal statt vertikal */
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
 	vertical-align: middle;
 	text-align: center; 
-	border-right: 1px solid #993404;
-	border-left: 1px solid #993404;
+	/* border-right: 1px solid #993404;
+	border-left: 1px solid #993404; */
 	width: 150px;
 	height: 30px;
 	color: #993404;  /* dunkleres braun */ 	
@@ -111,78 +91,83 @@ nav ul li {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
-nav li a {
-	display: table-cell;
+/*--------------------------------------------------------------
+	1.3 topnav  
+--------------------------------------------------------------*/
+
+nav.topnav ul li {   /* specificity: 13 : 3 elements + 1 class * 10 */ 
+  float: left;
+  display: inline-block;
+}
+
+/* Style the topnav links */ 
+nav.topnav li a {       /* specificity: 3 */
 	vertical-align: middle;
 	background-color: #fec44f;
 	text-decoration:none; /* => kein Link-Unterstrich */
-	color: #993404;  /* dunkleres braun */
+	color: #ffffe5;  /* #993404;   dunkleres braun */
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
-nav li:hover ul {  /* on hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
+
+/* Change color on hover  */
+nav.topnav li a:hover {   /* specificity: 12 - 2 elements + 1 classes * 10 */ 
+	color: #ffffe5;
+	background-color: #fa5305; /* etwas helleres dunkleres braun */
+}
+
+nav.topnav li a#active {
+	color: #ffffe5; /* !important;  */
+	background-color: #993404;
+}
+
+/* pseudo class: hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
+nav.topnav li:hover ul {  /* specificity: 13 - 3 elements + 1 pseudo class * 10 */ 
 	position: absolute;
 	display: block;
 }
 
-/*--------------------------------------------------------------
-2.0 header  
---------------------------------------------------------------*/
+nav.topnav .dropdown {
+	position: relative;
+	display: inline-block;
+}
 
-header {
-	position: fixed;
-	padding-left: 0%;
-	height: 40px;
-	top: 0px;
-	width: 100%;
+
+nav.topnav .dropdown-content {       
+	display: none;
+  position: absolute;
+	background-color: #fec44f; /* #ffffe5; */
+	width: 120px;
+	text-decoration:none; /* => kein Link-Unterstrich */
+	font-size: 16px;
+	/*color: #ffffe5;   #993404;   dunkleres braun 
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;*/
+	z-index: 1; 
+	/* An element with greater stack order is always in front of an element with a lower stack order.
+		z-index only works on positioned elements and flex items
+	*/
 	
-	background-color: #fee391;
-	color: #993404;
 }
+
+/* Links inside the dropdown */
+nav.topnav .dropdown-content a {
+	text-align: right;
+  padding: 0px 0px 0px, 0px;  /* top, right, bottom and left padding */
+	font-size: 20px;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+nav.topnav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
-2.1 topnav  
---------------------------------------------------------------*/
-
-/* Style the top navigation bar - class="topnav" */
-.topnav ul {
-	text-align: center;
-  overflow: hidden;
-}
-
-.topnav ul li {
-  float: left;
-  display: inline-block;
-	height: 40px;
-  color: #ffffe5;
-}
-
-
-/* Style the topnav links */
-.topnav ul a {
-  color: #ffffe5;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	color: #ffffe5;
-	background-color: #fa5305;
-}
-
-/* dropdown menue */
-.topnav li a, .dropbtn {
-  display: inline-block;
-  color: #993404;
-  text-align: center;
-  padding: 5px 20px;
-	font: 23px;
-  text-decoration: none; /* no link underline  */
-}
-
-/*--------------------------------------------------------------
-3.0 body 
+	2.0 body 
 --------------------------------------------------------------*/
 
 body {
@@ -190,12 +175,26 @@ body {
 	background-color: #993404; /* grelles Orange */
   background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
 	color: #fee391;
-	margin-top: 40px;
-	top: 0px;
+	margin-top: 40px;  /* top - header distance : required for better scrolling */
+	margin-bottom: 60px; /* bottom - footer distance : required for better scrolling */	
 }
 
 /*--------------------------------------------------------------
-3.1 .grid_2_cols
+	3.0 header  
+--------------------------------------------------------------*/
+
+header { 
+	height: 40px;
+	position: fixed;
+	padding-left: 0%;
+	top: 0px;
+	width: 100%;
+	background-color: #fee391;
+	color: #993404;
+}
+
+/*--------------------------------------------------------------
+	4.0 .grid_2_cols
 --------------------------------------------------------------*/
 .grid_2_cols {
 	display: grid;
@@ -212,97 +211,6 @@ body {
 	color: #fe9929;
 	font-family: cursive;
 }
-
-li.dropdown {
-  display: inline-block;
-}
-
-/* class submenu => ausblenden */
-.submenu {
-	display:none;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-  width: 140px;
-	background-color: #fec44f;
-	font-size: 10px;
-	z-index: 1;
-}
-
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Hintergrund für URL festlegen und Bullets ausblenden  */
-nav ul {
-	list-style-type: none; /* no bullets  */
-	margin: 0;
-  padding: 0;
-	height: 40px;
-	padding-left: 0px;
-}
-
-
-nav ul li {
-	display: inline-block;   /* => horizontal statt vertikal */
-	position:relative; /* => zugeordnete submenu untereinander angeordnet */
-	vertical-align: middle;
-	text-align: center; 
-	border-right: 1px solid #993404;
-	border-left: 1px solid #993404;
-	width: 150px;
-	height: 30px;
-	color: #993404;  /* dunkleres braun */ 	
-	font-size: 23px;
-	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
-}
-
-nav li a {
-	display: table-cell;
-	vertical-align: middle;
-	background-color: #fec44f;
-	text-decoration:none; /* => kein Link-Unterstrich */
-	color: #993404;  /* dunkleres braun */
-	font-size: 23px;
-	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
-}
-nav li:hover ul {  /* on hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
-	position: absolute;
-	display: block;
-}
-
-
-li a:hover {
-	color: #ffffe5;
-	background-color: #fa5305; /* etwas helleres dunkleres braun */
-}
-
-.active {
-	color: #ffffe5 !important;
-	background-color: #993404;
-	/* background-color: #993404; */
-}
-
-/* submenu von nav */
-.submenu {
-	display:none;
-}
-
-.submenu li a {
-	display:block;
-	height: 30px;
-	width: 150px;
-	background-color: #fec44f;
-	color: #993404;
-	font-size: 20px;
-	padding-top: 10px;
-}
-
 
 p {
 	margin-top: 10px;
@@ -332,7 +240,7 @@ ul li {
 }
 
 a { 
-	color: #662506 ;  /* color links - red */
+	color: #662506;  /* color links - red */
 	font-size: 20px;
 	font-family: serif;
 }
@@ -392,8 +300,16 @@ hr {
 	padding-left: 0px;
 }
 
+p.middle_text {
+	margin-top: 30px;
+	max-width: 1200px;
+	text-align: center;
+}
 
 
+/*--------------------------------------------------------------
+	5.0 footer
+--------------------------------------------------------------*/
 
 footer {
 	height: 40px;
@@ -405,8 +321,9 @@ footer {
 	color: #993404;
 }
 
+
 footer p {
-	margin-top: 0px;
+
 	padding-top: 0px;
 	font-size: 18px;
 	padding-left: 10px;
@@ -423,21 +340,13 @@ footer ul {
 footer ul li {
 	display: inline-block;
 	margin-right: 50px;
-	margin-top: 10px;
 }
 
 footer ul li a {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 	font-size: 25px;
 	text-decoration: none;
-	display: table-cell;
 	color: #993404;
-}
-
-.middle_text {
-	margin-top: 30px;
-	max-width: 1200px;
-	text-align: center;
 }
 
 

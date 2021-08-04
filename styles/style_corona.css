@@ -1,14 +1,12 @@
 ﻿body {
 	background-image: url("./../picture/corona.jpg");
-	background-color: #B30000;
+	background-color: var(--YlOrBr_6_9);
 }
 
 ul li {
-	color: #FFEFBB;   /* color bullets  */
+	color: var(--YlOrBr_3_9);   /* color bullets  */
 }
 
 a { 
-	color: #FFEFBB;  /* color link text  */
+	color: var(--YlOrBr_3_9);  /* color links  */
 }
-
-

@@ -17,14 +17,14 @@
 	>>> TABLE OF CONTENTS:
 	----------------------------------------------------------------
 	1.0 global definitions
-	  1.1 color table
-	  1.2 nav
-	  1.2 .topnav
+	1.1 color table
+	1.2 nav
+	1.2 .topnav
 	2.0 body
 	3.0 header
 	4.0 .grid_2_cols
 	5.0 footer
-
+	
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -48,17 +48,18 @@ section {
 	1.1 color table   
 --------------------------------------------------------------*/
 
-/* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	
-  #ffffe5 ~very white ocker
-	#fff7bc ~white ocker
-	#fee391 ~light ocker
-	#fec44f ~ocker
-	#fe9929 ~dark ocker
-	#ec7014 ~light brown
-	#cc4c02 ~brown
-	#993404 ~dark brown
-	#662506 ~very dark brown
-*/
+/* https://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=9  9-class YlOrBr 	*/
+:root {
+  --YlOrBr_1_9: #ffffe5; /* ~very white ocker */
+	--YlOrBr_2_9: #fff7bc; /* ~white ocker */
+	--YlOrBr_3_9: #fee391; /* ~light ocker */
+	--YlOrBr_4_9: #fec44f; /* ~ocker */
+	--YlOrBr_5_9: #fe9929; /* ~dark ocker */
+	--YlOrBr_6_9: #ec7014; /* ~light brown */
+	--YlOrBr_7_9: #cc4c02; /* ~brown */
+	--YlOrBr_8_9: #993404; /* ~dark brown */
+	--YlOrBr_9_9: #662506; /* ~very dark brown */
+}
 
 /*--------------------------------------------------------------
 	1.2 nav   
@@ -68,7 +69,7 @@ section {
 nav ul {                   /* specificity: 2 : two elements/HTML selectors */  
 	list-style-type: none; /* no bullets  */
 	height: 40px;
-	background-color: #fec44f; /* Hintergrund für nav festlegen */
+	background-color: var(--YlOrBr_4_9) /* #fec44f;  Hintergrund für nav festlegen */
 }
 
 /* Style the top navigation bar - class="topnav" */
@@ -82,11 +83,11 @@ nav ul li {         /* specificity: 3 */
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
 	vertical-align: middle;
 	text-align: center; 
-	/* border-right: 1px solid #993404;
-	border-left: 1px solid #993404; */
+	/* border-right: 1px solid var(--YlOrBr_8_9);
+	border-left: 1px solid var(--YlOrBr_8_9); */
 	width: 150px;
 	height: 30px;
-	color: #993404;  /* dunkleres braun */ 	
+	color: var(--YlOrBr_8_9);  /* dunkleres braun */ 	
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
@@ -103,22 +104,22 @@ nav.topnav ul li {   /* specificity: 13 : 3 elements + 1 class * 10 */
 /* Style the topnav links */ 
 nav.topnav li a {       /* specificity: 3 */
 	vertical-align: middle;
-	background-color: #fec44f;
+	background-color: var(--YlOrBr_4_9);
 	text-decoration:none; /* => kein Link-Unterstrich */
-	color: #ffffe5;  /* #993404;   dunkleres braun */
+	color: var(--YlOrBr_1_9);  /* #993404;   dunkleres braun */
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
 /* Change color on hover  */
-nav.topnav li a:hover {   /* specificity: 12 - 2 elements + 1 classes * 10 */ 
-	color: #ffffe5;
-	background-color: #fa5305; /* etwas helleres dunkleres braun */
+nav.topnav li a:hover, li a:hover {   /* specificity: 12 - 2 elements + 1 classes * 10 */ 
+	color: var(--YlOrBr_1_9);
+	background-color: var(--YlOrBr_6_9); /* etwas helleres dunkleres braun */
 }
 
 nav.topnav li a#active {
-	color: #ffffe5; /* !important;  */
-	background-color: #993404;
+	color: var(--YlOrBr_1_9); /* !important;  */
+	background-color: var(--YlOrBr_8_9);
 }
 
 /* pseudo class: hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
@@ -132,15 +133,13 @@ nav.topnav .dropdown {
 	display: inline-block;
 }
 
-
 nav.topnav .dropdown-content {       
 	display: none;
   position: absolute;
-	background-color: #fec44f; /* #ffffe5; */
+	background-color: var(--YlOrBr_4_9); /* #ffffe5; */
 	width: 120px;
 	text-decoration:none; /* => kein Link-Unterstrich */
 	font-size: 16px;
-	/*color: #ffffe5;   #993404;   dunkleres braun 
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;*/
 	z-index: 1; 
 	/* An element with greater stack order is always in front of an element with a lower stack order.
@@ -163,18 +162,15 @@ nav.topnav .dropdown:hover .dropdown-content {
 }
 
 
-
-
-
 /*--------------------------------------------------------------
 	2.0 body 
 --------------------------------------------------------------*/
 
 body {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
-	background-color: #993404; /* grelles Orange */
+	background-color: var(--YlOrBr_2_9);  /* grelles Orange */
   background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
-	color: #fee391;
+	color: var(--YlOrBr_3_9);
 	margin-top: 40px;  /* top - header distance : required for better scrolling */
 	margin-bottom: 60px; /* bottom - footer distance : required for better scrolling */	
 }
@@ -189,8 +185,8 @@ header {
 	padding-left: 0%;
 	top: 0px;
 	width: 100%;
-	background-color: #fee391;
-	color: #993404;
+	background-color: var(--YlOrBr_3_9);
+	color: var(--YlOrBr_8_9);
 }
 
 /*--------------------------------------------------------------
@@ -208,7 +204,7 @@ header {
 	font-size: 28px;
 	text-align: left;
 	margin-left: 100px;
-	color: #fe9929;
+	color: var(--YlOrBr_4_9);
 	font-family: cursive;
 }
 
@@ -222,30 +218,38 @@ p {
 	font-family: serif;
 }
 
+p.middle_text {
+	margin-top: 30px;
+	max-width: 1200px;
+	text-align: center;
+}
+
 ul {
-	/* list-style-type: none;
-	float:right; */
+	/* list-style-type: none; */ /* none => no bullets */
+	float: left;
 	padding-left: 20px;
 	padding-right: 50px;
 	font-weight: bold;
-	color: #fe9929;
+	color: var(--YlOrBr_5_9); /* color text w/o link */
 }
 
 ul li {
-	/* display: inline-block; */ /* otherwise no crlf */
+	/* display: inline-block; */ /* inline-block => no crlf */
 	margin-left: 20px;
 	margin-right: 50px;
 	margin-top: 5px;
-	color: #662506;  /* color bullets - red */
+	color: var(--YlOrBr_9_9);  /* color bullets */
 }
 
 a { 
-	color: #662506;  /* color links - red */
+	color: var(--YlOrBr_9_9);  /* color links */
 	font-size: 20px;
 	font-family: serif;
 }
 
-/* table */
+/*--------------------------------------------------------------
+	table
+--------------------------------------------------------------*/
 table {
 	margin-top:20px;
 	font-size: 20px;
@@ -254,40 +258,41 @@ table {
 }
 
 th {
-	color: #fe9929;
+	color: var(--YlOrBr_5_9);
 	font-size: 23px;
 	text-align: center;
 }
 
 td {
 	font-size: 20px;
-	color: #fee391;
+	color: var(--YlOrBr_3_9);
 	font-family: serif;
   font-family: bold;
 }
 
-
-
+/*--------------------------------------------------------------
+	header
+--------------------------------------------------------------*/
 h1 {
 	max-width: 1200px;
 	text-align: center;
 	font-size: 58px;
-	color: #fee391;
+	color: var(--YlOrBr_3_9);
 	font-family: 'harlow';
 	font-family: cursive;
 }
 
 h2 {
 	font-size: 20px;
-	color: #fe9929;
+	color: var(--YlOrBr_5_9);
 	font-family: 'harlow';
 	font-family: cursive;
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 20px;
 	text-align: center;
-	color: #fe9929;
+	color: var(--YlOrBr_5_9);
 	font-family: cursive;
 }
 
@@ -296,14 +301,8 @@ hr {
 	height: 5px; 
 	margin: 0px;
 	color: blue;
-	background: #dfac20;
+	background: var(--YlOrBr_4_9);
 	padding-left: 0px;
-}
-
-p.middle_text {
-	margin-top: 30px;
-	max-width: 1200px;
-	text-align: center;
 }
 
 
@@ -317,17 +316,17 @@ footer {
 	padding-left: 0%;
 	bottom: 0px;
 	width: 100%;
-	background-color: #fee391;
-	color: #993404;
+	background-color: var(--YlOrBr_3_9);
+	color: var(--YlOrBr_8_9);
 }
 
 
 footer p {
-
+	
 	padding-top: 0px;
 	font-size: 18px;
 	padding-left: 10px;
-	color: #993404;
+	color: var(--YlOrBr_8_9);
 	float: left;
 }
 
@@ -346,7 +345,7 @@ footer ul li a {
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 	font-size: 25px;
 	text-decoration: none;
-	color: #993404;
+	color: var(--YlOrBr_8_9);
 }
 
 

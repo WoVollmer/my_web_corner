@@ -66,9 +66,8 @@ section {
 --------------------------------------------------------------*/
 
 /* Hintergrund für URL festlegen und Bullets ausblenden  */
-nav ul {                   /* specificity: 2 : two elements/HTML selectors */  
+nav {                   /* specificity: 2 : two elements/HTML selectors */  
 	list-style-type: none; /* no bullets  */
-	background-color: var(--YlOrBr_4_9) /* #fec44f;  Hintergrund für nav festlegen */	
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
 	vertical-align: middle;
 	max-width: 1200px;
@@ -91,7 +90,7 @@ nav ul {                   /* specificity: 2 : two elements/HTML selectors */
 }
 
 /* 
-nav.topnav ul  {   specificity: 13 : 3 elements + 1 class * 10 
+nav.topnav {   specificity: 13 : 3 elements + 1 class * 10 
   float: left;
   display: inline-block;
 }
@@ -100,8 +99,8 @@ nav.topnav ul  {   specificity: 13 : 3 elements + 1 class * 10
 /* Style the topnav links */ 
 nav.topnav  a {       /* specificity: 3 */
 	vertical-align: middle;
-	padding-left: 14px;
-	padding-right: 	20px;
+	padding-left: 24px;
+	padding-right: 	30px;
 	text-decoration:none; /* => kein Link-Unterstrich */
 	text-align: center;
 	color: var(--YlOrBr_1_9);  /* #993404;   dunkleres braun */

@@ -14,26 +14,41 @@
 	</head>	
 	
 	<body>
-		<header>					
+		<!-- 
 			<nav class="topnav">
-				<ul>
-					<li><a href="index.html">Start</a></li> 
-					<li><a href="corona.html" id="active">Corona Sites</a></li>
-					<li><a href="media.html">Media</a></li> 
-					<li class="dropdown"><a href="javascript:void(0)" class="dropbutton">Next</a>
-						<div class="dropdown-content">
-							<a href="next.html">Next 1</a>
-							<a href="next.html">Next 2</a>
-						</div>
-					</li>
-				</ul>	
+			<ul>
+			<li><a href="index.html">Start</a></li> 
+			<li><a href="corona.html" id="active">Corona Sites</a></li>
+			<li><a href="media.html">Media</a></li> 
+			<li class="dropdown"><a href="javascript:void(0)" class="dropbutton">Next</a>
+			<div class="dropdown-content">
+			<a href="next.html">Next 1</a>
+			<a href="next.html">Next 2</a>
+			</div>
+			</li>
+			</ul>	
 			</nav>
-		</header>	
+		-->
+		
+		
+		<nav class="topnav">
+			<ul>
+				<a href="index.html">Start</a> 
+				<a href="corona.html" id="active">Corona Sites</a>
+				<a href="media.html">Media</a>
+				<div class="dropdown"><a href="javascript:void(0)" class="dropbutton">Next</a>
+					<div class="dropdown-content">
+						<a href="next.html">Next 1</a>
+						<a href="next.html">Next 2</a>
+					</div>
+				</div>
+			</ul>	
+		</nav>			
 		
 		<h1><center>Covid-19 Dashboard</center></h1>
 		
-		<div class="grid_2_cols">
-			<section>	
+		<div class="flex_2_cols">
+			<div class="flex-item-left">	
 				<h3>Covid-19 Dashboard</h3>
 				<ul>
 					<li><a href="https://wovollmer.github.io/github.io/" target="_blank" rel="noopener">
@@ -50,8 +65,33 @@
 					WHO Coronavirus Disease Dashboard</a> </li>						
 					<li><a href="https://www.esri.de/de-de/landingpages/corona-impact-2020/uebersicht" target="_blank" rel="noopener">
 					ESRI Dashboards Overview (u.a. Österreich, Frankreich, ...)</a></li>	
-				</ul>
-				<br>
+					</ul>	
+					</div>
+					<div class="flex-item-right">
+					<h3>Information</h3>
+					<ul>
+						<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html">
+						RKI: Fallzahlen in Deutschland</a></li>
+						<li><a href="https://www.sueddeutsche.de/wissen/coronavirus-zahlen-daten-1.4844448">
+						SZ: Zahlen und Daten zu Covid-19</a> </li>
+						<li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/coronavirus/zahlen-zum-coronavirus-die-pandemie-im-ueberblick-16653240.html">
+						FAZ: Zahlen zum Coronavirus</a> </li>
+						<li><a href="https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm">
+						LGL Bayern: Coronavirus Fallzahlen</a> </li>
+						<li><a href="https://www.muenchen.de/rathaus/Stadtinfos/Coronavirus-Fallzahlen.html">
+						Stadt München: Coronavirus Fallzahlen</a> </li>
+						<li><a href="https://stochastik-tu-ilmenau.github.io/COVID-19/germany">
+						TU Ilmenau: Schätzen der Reproduktionszahl </a> </li>
+						<li><a href="https://corona.stat.uni-muenchen.de/nowcast/">
+						LMU: Reproduktionszahl Bayern & München</a> </li>
+						<li><a href="https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea">
+						European Centre for Disease Prevention and Control</a> </li>
+					</ul>	
+			</div>
+		</div>	
+		
+		<div class="flex_2_cols">
+			<div class="flex-item-left">	
 				
 				<h3>Vaccinations</h3>
 				<ul>
@@ -61,29 +101,8 @@
 					German Federal Ministry of Health - Vaccination Dashboard</a></li>		
 				</ul>
 				
-			</section>
-			<section>		
-				<h3>Information</h3>
-				<ul>
-					<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html">
-					RKI: Fallzahlen in Deutschland</a></li>
-					<li><a href="https://www.sueddeutsche.de/wissen/coronavirus-zahlen-daten-1.4844448">
-					SZ: Zahlen und Daten zu Covid-19</a> </li>
-					<li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/coronavirus/zahlen-zum-coronavirus-die-pandemie-im-ueberblick-16653240.html">
-					FAZ: Zahlen zum Coronavirus</a> </li>
-					<li><a href="https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm">
-					LGL Bayern: Coronavirus Fallzahlen</a> </li>
-					<li><a href="https://www.muenchen.de/rathaus/Stadtinfos/Coronavirus-Fallzahlen.html">
-					Stadt München: Coronavirus Fallzahlen</a> </li>
-					<li><a href="https://stochastik-tu-ilmenau.github.io/COVID-19/germany">
-					TU Ilmenau: Schätzen der Reproduktionszahl </a> </li>
-					<li><a href="https://corona.stat.uni-muenchen.de/nowcast/">
-					LMU: Reproduktionszahl Bayern & München</a> </li>
-					<li><a href="https://www.ecdc.europa.eu/en/cases-2019-ncov-eueea">
-					European Centre for Disease Prevention and Control</a> </li>
-				</ul>	
-			</section>
-		</div>
+			</div>
+		</div>	
 		
 		<p class="middle_text"><em>Let's have a look !</em></p>
 		
@@ -96,4 +115,4 @@
 		</footer>
 		
 	</body>	
-</html>																																																																																																																																																																																																															
+</html>																																																																																																																																																																																																																							

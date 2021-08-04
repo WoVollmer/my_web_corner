@@ -68,25 +68,10 @@ section {
 /* Hintergrund für URL festlegen und Bullets ausblenden  */
 nav ul {                   /* specificity: 2 : two elements/HTML selectors */  
 	list-style-type: none; /* no bullets  */
-	height: 40px;
-	background-color: var(--YlOrBr_4_9) /* #fec44f;  Hintergrund für nav festlegen */
-}
-
-/* Style the top navigation bar - class="topnav" */
-nav.topnav ul {        /* specificity: 12 : 1 elements + 1 class * 10 */ 
-	text-align: center;
-  /* overflow: hidden;  */
-}
-
-nav ul li {         /* specificity: 3 */
-	display: inline-block;   /* => horizontal statt vertikal */
+	background-color: var(--YlOrBr_4_9) /* #fec44f;  Hintergrund für nav festlegen */	
 	position:relative; /* => zugeordnete submenu untereinander angeordnet */
 	vertical-align: middle;
-	text-align: center; 
-	/* border-right: 1px solid var(--YlOrBr_8_9);
-	border-left: 1px solid var(--YlOrBr_8_9); */
-	width: 150px;
-	height: 30px;
+	max-width: 1200px;
 	color: var(--YlOrBr_8_9);  /* dunkleres braun */ 	
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
@@ -96,36 +81,41 @@ nav ul li {         /* specificity: 3 */
 	1.3 topnav  
 --------------------------------------------------------------*/
 
-nav.topnav ul li {   /* specificity: 13 : 3 elements + 1 class * 10 */ 
+/* Style the top navigation bar - class="topnav" */
+
+
+/* Style the top navigation bar */
+.topnav {
+  display: flex;
+	background-color: var(--YlOrBr_4_9)
+}
+
+/* 
+nav.topnav ul  {   specificity: 13 : 3 elements + 1 class * 10 
   float: left;
   display: inline-block;
 }
+*/ 
 
 /* Style the topnav links */ 
-nav.topnav li a {       /* specificity: 3 */
+nav.topnav  a {       /* specificity: 3 */
 	vertical-align: middle;
-	background-color: var(--YlOrBr_4_9);
+	padding-left: 14px;
+	padding-right: 	20px;
 	text-decoration:none; /* => kein Link-Unterstrich */
+	text-align: center;
 	color: var(--YlOrBr_1_9);  /* #993404;   dunkleres braun */
 	font-size: 23px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 }
 
 /* Change color on hover  */
-nav.topnav li a:hover, li a:hover {   /* specificity: 12 - 2 elements + 1 classes * 10 */ 
-	color: var(--YlOrBr_1_9);
+nav.topnav  a:hover, li a:hover {   /* specificity: 12 - 2 elements + 1 classes * 10 */ 
 	background-color: var(--YlOrBr_6_9); /* etwas helleres dunkleres braun */
 }
 
-nav.topnav li a#active {
-	color: var(--YlOrBr_1_9); /* !important;  */
-	background-color: var(--YlOrBr_8_9);
-}
-
-/* pseudo class: hover: ausgeblendete (display: none) dropdown menu (ul) wird angezeigt */
-nav.topnav li:hover ul {  /* specificity: 13 - 3 elements + 1 pseudo class * 10 */ 
-	position: absolute;
-	display: block;
+nav.topnav  a#active {
+	background-color: var(--YlOrBr_8_9); /* !important;  */
 }
 
 nav.topnav .dropdown {
@@ -137,7 +127,7 @@ nav.topnav .dropdown-content {
 	display: none;
   position: absolute;
 	background-color: var(--YlOrBr_4_9); /* #ffffe5; */
-	width: 120px;
+	min-width: 120px;
 	text-decoration:none; /* => kein Link-Unterstrich */
 	font-size: 16px;
 	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;*/
@@ -171,7 +161,7 @@ body {
 	background-color: var(--YlOrBr_2_9);  /* grelles Orange */
   background-image: url("./../picture/delfine.jpg"); /* zugspitze_morgenrot.jpg or delfine.jpg  */		
 	color: var(--YlOrBr_3_9);
-	margin-top: 40px;  /* top - header distance : required for better scrolling */
+	/* margin-top: 40px;   top - header distance : required for better scrolling */
 	margin-bottom: 60px; /* bottom - footer distance : required for better scrolling */	
 }
 
@@ -207,6 +197,39 @@ header {
 	color: var(--YlOrBr_4_9);
 	font-family: cursive;
 }
+
+/* Column container */
+.flex_2_cols {
+  display: flex;
+  /* flex-wrap: wrap; max-width: 1200px; */
+	margin-top: 20px;
+  max-width: 1200px;
+}
+
+
+.flex_2_cols h3 {
+	margin-top: 10px;
+	font-size: 28px;
+	text-align: left;
+	margin-left: 100px;
+	color: var(--YlOrBr_4_9);
+	font-family: cursive;
+}
+
+.flex-item-left, .flex-item-right {
+  padding: 10px;
+  flex: 50%;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .flex_2_cols, .topnav {
+    flex-direction: column;
+	}
+}
+
+
 
 p {
 	margin-top: 10px;

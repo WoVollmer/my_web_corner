@@ -128,8 +128,7 @@ nav.topnav .dropdown-content {
 	background-color: var(--YlOrBr_4_9); /* #ffffe5; */
 	min-width: 120px;
 	text-decoration:none; /* => kein Link-Unterstrich */
-	font-size: 16px;
-	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;*/
+	font-family: Helvetica, Arial, Geneva, cursive, sans-serif;
 	z-index: 1; 
 	/* An element with greater stack order is always in front of an element with a lower stack order.
 		z-index only works on positioned elements and flex items
@@ -140,7 +139,7 @@ nav.topnav .dropdown-content {
 /* Links inside the dropdown */
 nav.topnav .dropdown-content a {
 	text-align: right;
-  padding: 0px 0px 0px, 0px;  /* top, right, bottom and left padding */
+  padding: 0px 0px 0px 0px;  /* top, right, bottom and left padding */
 	font-size: 20px;
   display: block;
 }
